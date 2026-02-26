@@ -31,6 +31,7 @@ CREATE TABLE dim_date(
 # Here is the PopulateDateDimension Stored Procedure: 
 delimiter //
 
+-- create a stored procedure (kinda like a function that does something but does not return something)
 DROP PROCEDURE IF EXISTS PopulateDateDimension//
 CREATE PROCEDURE PopulateDateDimension(BeginDate DATETIME, EndDate DATETIME)
 BEGIN

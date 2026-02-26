@@ -2,9 +2,9 @@ CREATE DATABASE `Northwind_DW_Demo` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!
 
 USE Northwind_DW_Demo;
 
-CREATE TABLE fact_orders AS
-SELECT o.id,
-	od.id,
+CREATE TABLE fact_orders AS -- CTAS statement (crate table as select)
+SELECT o.id AS order_id, -- use select statement to generate prototype of table, need a surrogate primary key (add at end)
+    od.id AS order_detail_id,
     o.customer_id,
     o.employee_id,
     od.product_id,
@@ -28,6 +28,10 @@ LEFT OUTER JOIN northwind.order_details AS od
 ON o.id = od.order_id
 INNER JOIN northwind.order_details_status AS ods
 ON od.status_id = ods.id;
+
+-- add primary key to the table
+ALTER TABLE fact_orders
+ADD COLUMN fact_order_key int NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST; 
 
 
 SELECT * FROM Northwind_DW_Demo.fact_orders;
