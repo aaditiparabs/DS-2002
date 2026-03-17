@@ -25,7 +25,7 @@ FROM northwind.products;
 SELECT id AS product_id 
 	, product_name
 FROM northwind.products
-WHERE discontinued = 0;
+WHERE discontinued = 0; -- so not discontinued basically
 
 
 -- --------------------------------------------------------------------------------------
