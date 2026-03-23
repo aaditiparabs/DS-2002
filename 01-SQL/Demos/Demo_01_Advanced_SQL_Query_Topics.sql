@@ -1,8 +1,8 @@
 -- ------------------------------------------------------------------------------------
--- DERIVED TABLE EXPRESSION: Scope of Alias is this Outer Query ONLY 
+-- DERIVED TABLE EXPRESSION: Scope of Alias (o) is this Outer Query ONLY 
 -- ------------------------------------------------------------------------------------
-SELECT o.* FROM (
-	SELECT id AS order_id, customer_id, employee_id, order_date
+SELECT o.* FROM ( -- outer query selects from the derived table and sorts it
+	SELECT id AS order_id, customer_id, employee_id, order_date -- this is inner query that creates a temp result set that is treated like a table (derived table)
 	FROM northwind.orders
 ) AS o
 ORDER BY order_date DESC;
@@ -17,7 +17,7 @@ WITH OrdersCTE AS (
 SELECT * FROM OrdersCTE ORDER BY order_date DESC;
 
 -- Here the alias' are declared in the CTE definition
-WITH OrdersCTE (order_id, customer_id, employee_id, order_date) AS (
+WITH OrdersCTE (order_id, customer_id, employee_id, order_date) AS ( -- the order_id, etc are aliass
 	SELECT id, customer_id, employee_id, order_date
 	FROM northwind.orders
 )
