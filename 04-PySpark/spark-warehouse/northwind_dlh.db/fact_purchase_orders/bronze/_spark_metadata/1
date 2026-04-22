@@ -1,0 +1,2 @@
+v1
+{"path":"file:///C:/Users/aadit/Downloads/dssystems/DS-2002/04-PySpark/spark-warehouse/northwind_dlh.db/fact_purchase_orders/bronze/part-00000-7601596c-e168-4d2b-8ce0-694154185265-c000.snappy.parquet","size":8500,"isDir":false,"modificationTime":1776817181179,"blockReplication":1,"blockSize":33554432,"action":"add"}
