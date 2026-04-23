@@ -1,2 +1,2 @@
 v1
-{"path":"file:///C:/Users/aadit/Downloads/dssystems/DS-2002/04-PySpark/spark-warehouse/northwind_dlh.db/fact_inventory_transactions/bronze/part-00000-800b2539-4224-4165-b8e2-03f80b0c7aa7-c000.snappy.parquet","size":4471,"isDir":false,"modificationTime":1776815131054,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///C:/Users/aadit/Downloads/dssystems/DS-2002/04-PySpark/spark-warehouse/northwind_dlh.db/fact_inventory_transactions/bronze/part-00000-2d85509a-eff0-4523-ac1d-a93ad9851e4a-c000.snappy.parquet","size":4471,"isDir":false,"modificationTime":1776902125973,"blockReplication":1,"blockSize":33554432,"action":"add"}
