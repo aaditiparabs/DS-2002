@@ -5,7 +5,7 @@
 
 class DataFactory:
     def __init__(self, ):
-        self.source = "/FileStore/lab_data/healthcare/tracker/streaming/"
+        self.source = "/FileStore/proj_data/healthcare/tracker/streaming/"
         self.userdir = f"{DA.paths.working_dir}/tracker"
         self.curr_mo = 1
     
